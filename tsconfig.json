@@ -50,7 +50,8 @@
     "./declarations/declarations.d.ts",
     "./utils/**/*",
     "./styles/**/*",
-    "./node_modules/@types/**/*"
+    "./node_modules/@types/**/*",
+    "node_modules/.pnpm/qrcode-generator@1.4.4/node_modules/qrcode-generator/qrcode.d.ts"
   ],
   "ts-node": {
     "compilerOptions": {
