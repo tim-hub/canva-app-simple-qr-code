@@ -1,6 +1,6 @@
 {
-  "name": "canva-apps-sdk-starter-kit",
-  "description": "A boilerplate for creating Canva Apps.",
+  "name": "Simple QR Code",
+  "description": "A simple tool to create a QR code",
   "engines": {
     "node": "^18",
     "npm": "^9"
@@ -9,18 +9,18 @@
     "start": "node ./scripts/start.js",
     "build": "webpack --config webpack.config.js --mode production",
     "lint:types": "tsc",
-    "format": "prettier {components,examples,src,utils}/**/*.ts* --no-config --write",
-    "format:check": "prettier {components,examples,src,utils}/**/*.ts* --no-config --check --ignore-path",
+    "format": "prettier {components,src,utils}/**/*.ts* --no-config --write",
+    "format:check": "prettier {components,src,utils}/**/*.ts* --no-config --check --ignore-path",
     "format:file": "prettier $1 --no-config --write",
     "test": "jest --no-cache",
     "test:watch": "jest --no-cache --watch"
   },
   "keywords": [],
-  "author": "Canva Pty Ltd.",
-  "license": "SEE LICENSE IN LICENSE.md",
+  "author": "tim-hub",
+  "license": "SEE LICENSE IN README.md",
   "private": true,
   "dependencies": {
-    "@canva/app-ui-kit": "^1.0.0-beta.2",
+    "@canva/app-ui-kit": "1.0.0",
     "@canva/asset": "./sdk/asset",
     "@canva/data-provider": "./sdk/data_provider",
     "@canva/design": "./sdk/design",
@@ -28,7 +28,7 @@
     "@canva/preview": "./sdk/preview",
     "@canva/user": "./sdk/user",
     "clsx": "^1.2.1",
-    "qr-code-styling": "1.6.0-rc.1",
+    "qrcode": "^1.5.3",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },

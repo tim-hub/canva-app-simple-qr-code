@@ -37,9 +37,9 @@ const BACKEND_URL = `http://localhost:${CANVA_BACKEND_PORT}`;
 const getFrontendUrl = (protocol) =>
   `${protocol}://localhost:${CANVA_FRONTEND_PORT}`;
 
-if (!fs.existsSync(EXAMPLES_DIR)) {
-  throw new Error(`Directory does not exist: ${EXAMPLES_DIR}`);
-}
+// if (!fs.existsSync(EXAMPLES_DIR)) {
+//   throw new Error(`Directory does not exist: ${EXAMPLES_DIR}`);
+// }
 
 if (!CANVA_FRONTEND_PORT) {
   throw new Error("CANVA_FRONTEND_PORT environment variable is not defined");
