@@ -4,7 +4,6 @@ import styles from "../../styles/components.css";
 import { Box, Button, FormField, Rows, TextInput } from "@canva/app-ui-kit";
 import QRCode from "qrcode";
 
-
 const QRCodePage = () => {
   const [text, setText] = useState("");
 
@@ -15,14 +14,13 @@ const QRCodePage = () => {
   const [isLoading, setIsLoading] = React.useState(false);
   const disabled = !text || text.trim().length < 1;
 
-
   const addNativeImage = async () => {
     console.log("add image");
     try {
       setIsLoading(true);
       await addNativeElement({
         type: "IMAGE",
-        dataUrl: await getDataUrl()
+        dataUrl: await getDataUrl(),
       });
     } finally {
       console.log("add image done");
@@ -30,7 +28,6 @@ const QRCodePage = () => {
       setIsLoading(false);
     }
   };
-
 
   return (
     <div className={styles.scrollContainer}>
@@ -52,7 +49,7 @@ const QRCodePage = () => {
         </Box>
       </Rows>
       <Rows spacing="3u">
-        <Box padding={"1u"} paddingTop={'0'}>
+        <Box padding={"1u"} paddingTop={"0"}>
           <Button
             variant="primary"
             disabled={disabled}
@@ -67,6 +64,5 @@ const QRCodePage = () => {
     </div>
   );
 };
-
 
 export default QRCodePage;
