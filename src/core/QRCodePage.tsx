@@ -37,11 +37,12 @@ const QRCodePage = () => {
       <Rows spacing="3u">
         <Box padding={"1u"}>
           <FormField
-            label="Content"
+            label="Enter URL"
             value={text}
             control={(props) => (
               <TextInput
                 {...props}
+                placeholder={"Type anything you want here"}
                 onChange={(value) => {
                   setText(value);
                 }}
@@ -51,9 +52,8 @@ const QRCodePage = () => {
         </Box>
       </Rows>
       <Rows spacing="3u">
-        <Box padding={"1u"}>
+        <Box padding={"1u"} paddingTop={'0'}>
           <Button
-
             variant="primary"
             disabled={disabled}
             loading={isLoading}
