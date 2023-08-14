@@ -49,7 +49,7 @@ const QRCodePage = () => {
         </Box>
       </Rows>
       <Rows spacing="3u">
-        <Box padding={"1u"} paddingTop={"0"}>
+        <Box padding={"1u"} paddingTop={"2u"}>
           <Button
             variant="primary"
             disabled={disabled}
@@ -57,7 +57,7 @@ const QRCodePage = () => {
             stretch
             onClick={addNativeImage}
           >
-            Add QRCode
+            Add QR Code
           </Button>
         </Box>
       </Rows>
