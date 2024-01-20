@@ -27,6 +27,7 @@
     "@canva/error": "./sdk/error",
     "@canva/preview": "./sdk/preview",
     "@canva/user": "./sdk/user",
+    "@parcellab/react-use-umami": "^2.0.1",
     "clsx": "^1.2.1",
     "qrcode": "^1.5.3",
     "react": "^18.1.0",

@@ -5,15 +5,16 @@ import { App } from "./app";
 import "@canva/app-ui-kit/styles.css";
 import { Stats } from "./core/Stats";
 
+
 const root = createRoot(document.getElementById("root")!);
 
 function render() {
   root.render(
     <>
+      <Stats />
       <AppUiProvider>
         <App />
       </AppUiProvider>
-      <Stats />
     </>
   );
 }

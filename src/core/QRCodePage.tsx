@@ -3,8 +3,10 @@ import { addNativeElement } from "@canva/design/index";
 import styles from "../../styles/components.css";
 import { Box, Button, FormField, Rows, TextInput } from "@canva/app-ui-kit";
 import QRCode from "qrcode";
+import useUmami from "@parcellab/react-use-umami";
 
 const QRCodePage = () => {
+  const umamiTrack = useUmami('/')
   const [text, setText] = useState("");
 
   const getDataUrl = async (): Promise<string> => {
@@ -15,19 +17,21 @@ const QRCodePage = () => {
   const disabled = !text || text.trim().length < 1;
 
   const addNativeImage = async () => {
-    console.log("add image");
+    umamiTrack('start to add qr code')
     try {
+
       setIsLoading(true);
       await addNativeElement({
         type: "IMAGE",
         dataUrl: await getDataUrl(),
       });
     } finally {
-      console.log("add image done");
+      umamiTrack('add qr code successfully')
       setText("");
       setIsLoading(false);
     }
   };
+
 
   return (
     <div className={styles.scrollContainer}>
