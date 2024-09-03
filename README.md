@@ -1,3 +1,8 @@
+> This project is archieved.
+> 
+> Because the app has been removed by Canva from their APP store, and I could not get it back, 
+> please see [here](https://github.com/tim-hub/canva-app-simple-qr-code/issues/5) for details.
+
 # Simple QR Code
 
 
